@@ -1,0 +1,47 @@
+/* NavigationBar.css */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.logo a {
+  margin-left: 600px; /* 로고를 오른쪽으로 이동 */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+.search-bar {
+  display: flex;
+  margin-left: -400px;
+  justify-content: center; /* 가로축 기준 중앙 정렬 */
+  width: 100%; /* 필요에 따라 설정 */
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff0000;
+  color: white;
+  cursor: pointer;
+}
+
+.user-links {
+  margin-left: auto; /* 왼쪽으로 자동 마진을 추가하여 오른쪽 정렬 */
+  flex-shrink: 0; /* 유저 링크 영역의 크기가 줄어들지 않도록 설정 */
+  display: flex;
+  gap: 10px;
+}
