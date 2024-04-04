@@ -1,0 +1,9 @@
+.banner-container {
+    width: 100%; /* 배너의 너비 */
+    overflow: hidden; /* 컨테이너 밖의 이미지 숨김 */
+  }
+  
+  .banner-container img {
+    width: 100%; /* 이미지를 컨테이너에 맞춤 */
+    height: auto; /* 이미지의 비율을 유지 */
+  }

@@ -9,8 +9,8 @@ function Home() {
   return (
     <div>
       <NavigationBar />
-      <MainBanner />
       <Category />
+      <MainBanner />
       <Content />
       <Footer />
     </div>

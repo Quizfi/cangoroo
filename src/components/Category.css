@@ -1,0 +1,31 @@
+.category-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .category-menu li {
+    padding: 10px 30px;
+    position: relative; /* 드롭다운 메뉴를 위한 위치 지정 */
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+    display: none; /* 기본 상태에서는 숨김 */
+  }
+  
+  .category-menu li:hover .dropdown {
+    display: block; /* 항목에 마우스를 올렸을 때 드롭다운 표시 */
+  }
+  
+  .dropdown li {
+    padding: 5px 10px;
+  }
