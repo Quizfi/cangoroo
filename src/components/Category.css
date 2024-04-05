@@ -1,31 +1,39 @@
 .category-menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
-  
-  .category-menu li {
-    padding: 10px 30px;
-    position: relative; /* 드롭다운 메뉴를 위한 위치 지정 */
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 5px 0;
-    display: none; /* 기본 상태에서는 숨김 */
-  }
-  
-  .category-menu li:hover .dropdown {
-    display: block; /* 항목에 마우스를 올렸을 때 드롭다운 표시 */
-  }
-  
-  .dropdown li {
-    padding: 5px 10px;
-  }
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  white-space: nowrap; /* 항목을 한 줄에 표시 */
+}
+
+.category-menu li {
+  padding: 10px 30px;
+  position: relative; /* 드롭다운 메뉴를 위한 위치 지정 */
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* 서브 메뉴 스타일 조정 */
+.submenu {
+  display: none; /* 초기 상태: 숨김 */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  overflow-x: auto; /* 가로 스크롤 */
+  overflow-y: hidden;
+  white-space: nowrap; /* 아이템들을 가로로 나열 */
+  padding: 10px;
+  width: 100%; /* 박스 전체 폭 사용 */
+}
+
+/* 하위 메뉴 항목 스타일 */
+.submenu li {
+  display: inline-block; /* 가로로 나열 */
+  padding: 10px; /* 항목 내부 패딩 */
+}
+
+.category-menu li:hover .submenu {
+  display: block; /* 하위 메뉴 표시 */
+}

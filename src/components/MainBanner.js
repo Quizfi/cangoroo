@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import './MainBanner.css'; // 배너 스타일을 위한 CSS 파일
+import React, { useState, useEffect } from "react";
+import "./MainBanner.css"; // 배너 스타일을 위한 CSS 파일
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 // 이미지 URL 배열
 const images = [
-  "https://example.com/images/banner1.jpg",
-  "https://example.com/images/banner2.jpg",
-  "https://example.com/images/banner3.jpg",
+  "https://gi.esmplus.com/jjumang/sports.jpg",
+  "https://gi.esmplus.com/jjumang/culture.jpg",
+  "https://gi.esmplus.com/jjumang/hobby.jpg",
   // 추가 이미지 URL
 ];
 
@@ -21,9 +23,27 @@ function MainBanner() {
     return () => clearInterval(timer); // 컴포넌트가 언마운트될 때 타이머 제거
   }, []);
 
+  // 이전 이미지로 이동
+  const goToPrevious = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  // 다음 이미지로 이동
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
     <div className="banner-container">
+      <button onClick={goToPrevious}>
+        <FontAwesomeIcon icon={faArrowLeft} />
+      </button>
       <img src={images[currentIndex]} alt="banner" />
+      <button onClick={goToNext}>
+        <FontAwesomeIcon icon={faArrowRight} />
+      </button>
     </div>
   );
 }
