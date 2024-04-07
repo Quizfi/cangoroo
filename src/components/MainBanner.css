@@ -1,5 +1,7 @@
 .banner-container {
   width: 100%; /* 배너의 너비 전체 사용 */
+  border-radius: 10px;
+  margin: 0 auto; /* 상하 마진을 0, 좌우 마진을 auto로 설정하여 가운데 정렬 */
   height: 500px; /* 배너의 높이를 1200px로 고정 */
   overflow: hidden; /* 컨테이너 크기를 넘어서는 이미지 부분 숨김 */
   position: relative; /* 이미지 위치 조정을 위해 */

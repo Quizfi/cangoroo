@@ -3,7 +3,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: rgb(255, 133, 133);
+  margin-bottom: 1px;
 }
 
 .center-container {
@@ -13,7 +14,7 @@ header {
 }
 
 .logo a {
-  margin-left: 680px;
+  margin-left: 400px;
   text-decoration: none;
   font-weight: bold;
   font-size: 24px;
@@ -21,7 +22,7 @@ header {
 }
 
 .search-bar {
-  margin-right: 350px;
+  margin-right: 600px;
   display: flex;
   justify-content: center; /* 가로축 기준 중앙 정렬 */
   width: 100%; /* 필요에 따라 설정 */

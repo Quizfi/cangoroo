@@ -1,39 +1,69 @@
-.category-menu ul {
+.category-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 133, 133);
+  justify-content: center;
+  height: 45px;
+}
+
+.main-category-list {
   list-style: none;
   display: flex;
   justify-content: center;
   padding: 0;
-  white-space: nowrap; /* 항목을 한 줄에 표시 */
 }
 
-.category-menu li {
-  padding: 10px 30px;
-  position: relative; /* 드롭다운 메뉴를 위한 위치 지정 */
+.main-category-list li {
   cursor: pointer;
-  z-index: 1000;
+  padding: 10px 30px;  
+  color: #FFFFFF;
 }
 
-/* 서브 메뉴 스타일 조정 */
-.submenu {
-  display: none; /* 초기 상태: 숨김 */
+.main-category-list li a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: rgb(255, 255, 255); /* 링크 색상 */
+  font-size: 18px; /* 폰트 크기 */
+}
+
+/* 호버 효과 추가 */
+.main-category-list li a:hover {
+  color: #757575; /* 호버 시 색상 변경 */
+}
+
+/* "전체카테고리" 항목에 대한 스타일 */
+.all-categories {
+  position: relative; /* 드롭다운 위치 기준점 설정 */
+  background-color: #c267ff; /* 예시 배경색 */
+  border-radius: 10px;
+  
+}
+
+/* "전체카테고리" 드롭다운 메뉴 스타일 */
+.dropdown-content {
+  display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  overflow-x: auto; /* 가로 스크롤 */
-  overflow-y: hidden;
-  white-space: nowrap; /* 아이템들을 가로로 나열 */
-  padding: 10px;
-  width: 100%; /* 박스 전체 폭 사용 */
+  left: 0; /* 좌측 정렬 */
+  top: 100%; /* "전체카테고리" 항목의 아래쪽에 위치 */
+  border-radius: 10px;
+  background-color: #000000;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 160px; /* 드롭다운 메뉴의 최소 너비 */
+  z-index: 1;
 }
 
-/* 하위 메뉴 항목 스타일 */
-.submenu li {
-  display: inline-block; /* 가로로 나열 */
-  padding: 10px; /* 항목 내부 패딩 */
+/* 드롭다운 메뉴 항목 스타일 */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* 각 항목을 세로로 나열 */
 }
 
-.category-menu li:hover .submenu {
-  display: block; /* 하위 메뉴 표시 */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.all-categories:hover .dropdown-content {
+  display: block; /* 마우스 오버 시 드롭다운 메뉴 표시 */
 }
