@@ -5,7 +5,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 // 이미지 URL 배열
 const images = [
-  "https://gi.esmplus.com/jjumang/sports.jpg",
+  "https://gi.esmplus.com/jjumang/sportsre.jpg",
   "https://gi.esmplus.com/jjumang/culture.jpg",
   "https://gi.esmplus.com/jjumang/hobby.jpg",
   // 추가 이미지 URL

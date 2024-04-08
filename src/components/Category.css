@@ -16,8 +16,8 @@
 
 .main-category-list li {
   cursor: pointer;
-  padding: 10px 30px;  
-  color: #FFFFFF;
+  padding: 10px 30px;
+  color: #ffffff;
 }
 
 .main-category-list li a {
@@ -36,7 +36,7 @@
   position: relative; /* 드롭다운 위치 기준점 설정 */
   background-color: #c267ff; /* 예시 배경색 */
   border-radius: 10px;
-  
+  margin-right: 20px;
 }
 
 /* "전체카테고리" 드롭다운 메뉴 스타일 */
@@ -47,7 +47,7 @@
   top: 100%; /* "전체카테고리" 항목의 아래쪽에 위치 */
   border-radius: 10px;
   background-color: #000000;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   min-width: 160px; /* 드롭다운 메뉴의 최소 너비 */
   z-index: 1;
 }

@@ -4,6 +4,8 @@ import MainBanner from "./MainBanner";
 import Category from "./Category";
 import Content from "./Content";
 import Footer from "./Footer";
+import SportsWidget from "./SportsWidget";
+import ContentsBanner from "./ContentsBanner";
 
 function Home() {
   return (
@@ -11,6 +13,8 @@ function Home() {
       <NavigationBar />
       <Category />
       <MainBanner />
+      <SportsWidget />
+      <ContentsBanner />
       <Content />
       <Footer />
     </div>
