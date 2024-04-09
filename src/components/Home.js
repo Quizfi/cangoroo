@@ -6,6 +6,7 @@ import Content from "./Content";
 import Footer from "./Footer";
 import SportsWidget from "./SportsWidget";
 import ContentsBanner from "./ContentsBanner";
+import Club from "./Club";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <Category />
       <MainBanner />
       <SportsWidget />
+      <Club />
       <ContentsBanner />
       <Content />
       <Footer />
