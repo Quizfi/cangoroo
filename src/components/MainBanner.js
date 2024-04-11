@@ -1,50 +1,126 @@
-import React, { useState, useEffect } from "react";
-import "./MainBanner.css"; // 배너 스타일을 위한 CSS 파일
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
-// 이미지 URL 배열
-const images = [
-  "https://gi.esmplus.com/jjumang/sportsre.jpg",
-  "https://gi.esmplus.com/jjumang/culture.jpg",
-  "https://gi.esmplus.com/jjumang/hobby.jpg",
-  // 추가 이미지 URL
-];
+import React, { useState, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./MainBanner.css"; // CSS 파일 이름과 경로가 정확한지 확인
 
 function MainBanner() {
-  const [currentIndex, setCurrentIndex] = useState(0); // 현재 표시되는 이미지의 인덱스
+  const [currentIndex, setCurrentIndex] = useState(0); // 현재 인덱스 상태
+  const sliderRef = useRef(null); // sliderRef 생성
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      // 다음 이미지로 순환
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // 3초마다 이미지 변경
+  const totalSlides = 12; // 전체 슬라이드 개수 (실제 슬라이드 개수에 따라 조정)
 
-    return () => clearInterval(timer); // 컴포넌트가 언마운트될 때 타이머 제거
-  }, []);
-
-  // 이전 이미지로 이동
-  const goToPrevious = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-  };
-
-  // 다음 이미지로 이동
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const settings = {
+    dots: false, // 기본 닷 비활성화
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: "520px",
+    beforeChange: (current, next) => setCurrentIndex(next), // 현재 인덱스 업데이트
   };
 
   return (
-    <div className="banner-container">
-      <button onClick={goToPrevious}>
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </button>
-      <img src={images[currentIndex]} alt="banner" />
-      <button onClick={goToNext}>
-        <FontAwesomeIcon icon={faArrowRight} />
-      </button>
-    </div>
+    <>
+      <Slider {...settings} ref={sliderRef}>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/sports_re.jpg"
+            alt="배너1"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/culture_re.jpg"
+            alt="배너2"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/hobby_rere.jpg"
+            alt="배너3"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/hobby2.jpg"
+            alt="배너4"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/band.jpg"
+            alt="배너5"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/camping.jpg"
+            alt="배너6"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/tennis.jpg"
+            alt="배너7"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/book.jpg"
+            alt="배너8"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/tabletennis.jpg"
+            alt="배너9"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/draw.jpg"
+            alt="배너10"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/plant.jpg"
+            alt="배너11"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        <div>
+          <img
+            src="https://gi.esmplus.com/jjumang/dive.jpg"
+            alt="배너12"
+            className="main-banner-image" // 클래스 추가
+          />
+        </div>
+        {/* 추가 이미지 */}
+      </Slider>
+      <div className="custom-pagination">
+        {/* 이전 버튼 */}
+        <button onClick={() => sliderRef.current.slickPrev()}>&lt;</button>
+        {/* 현재 페이지 / 총 페이지 */}
+        {`${currentIndex + 1} / ${totalSlides}`}
+        {/* 다음 버튼 */}
+        <button onClick={() => sliderRef.current.slickNext()}>&gt;</button>
+      </div>
+    </>
   );
 }
 

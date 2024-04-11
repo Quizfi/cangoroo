@@ -1,0 +1,37 @@
+.horizontal-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.banner-image img {
+  width: 60%; /* 이미지 가로 크기를 배너의 60%로 설정 */
+  height: auto; /* 이미지 세로 크기를 자동으로 설정 */
+  border-radius: 8px 0 0 8px; /* 왼쪽 모서리만 둥글게 처리 */
+}
+
+.banner-text {
+  width: 40%; /* 텍스트 영역 가로 크기를 배너의 40%로 설정 */
+  padding: 0 20px;
+}
+
+.banner-text h2,
+.banner-text p {
+  margin: 0; /* 마진 제거 */
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
