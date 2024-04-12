@@ -8,6 +8,7 @@ import SportsWidget from "./SportsWidget";
 import ContentsBanner from "./ContentsBanner";
 import Club from "./Club";
 import MiddleBanner from "./MiddleBanner";
+import Locationwidget from "./Locationwidget";
 
 function Home() {
   return (
@@ -17,8 +18,9 @@ function Home() {
       <MainBanner />
       <SportsWidget />
       <Club />
-      <MiddleBanner />
       <ContentsBanner />
+      <MiddleBanner />
+      <Locationwidget />
       <Content />
       <Footer />
     </div>

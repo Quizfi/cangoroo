@@ -1,38 +1,46 @@
 .contentsbanner-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 70px; /* 배너 사이의 간격 */
-  margin: 20px 0; /* 상하 마진 */
+  gap: 20px; /* 배너 간 간격 */
+  padding: 20px 0;
   margin-top: 100px;
-  min-height: 500px;
 }
 
 .contentsbanner-title {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: -50px; /* 제목과 배너 사이의 간격 */
+  text-align: left;
+  padding-left: 180px;
+  margin-top: 10px;
+  margin-bottom: -80px; /* 제목과 배너 사이의 간격 */
   color: #333; /* 제목 색상 */
   font-size: 24px; /* 제목 폰트 크기 */
 }
 
 .banner {
-  width: 25%; /* 배너의 너비 */
-  height: 500px; /* 배너의 높이를 800px로 설정 */
-  background-size: cover; /* 배경 이미지를 컨테이너에 맞춤 */
-  background-position: center; /* 배경 이미지 중앙 정렬 */
+  flex: 1;
   display: flex;
-  align-items: center; /* 텍스트를 세로 중앙에 위치 */
-  justify-content: center; /* 텍스트를 가로 중앙에 위치 */
-  color: rgb(0, 0, 0); /* 텍스트 색상 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 배너에 그림자 추가 */
+  flex-direction: column; /* 요소들을 세로로 나열 */
+  align-items: center; /* 가운데 정렬 */
+  background-size: cover; /* 배경 이미지 커버 */
+  border-radius: 10px; /* 모서리 둥글게 */
+}
+
+.banner-content {
+  width: 80%;
+}
+
+.banner-content img {
+  width: 80%; /* 이미지 너비 100% */
+  height: auto; /* 이미지 높이 자동 */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  justify-content: center;
+  text-align: center;
 }
 
 .banner-text {
+  background-color: #fff; /* 텍스트 배경 흰색 */
+  padding: 20px;
   text-align: center; /* 텍스트 중앙 정렬 */
-  cursor: pointer; /* 마우스 오버 시 커서 변경 */
-}
-
-.banner-text:hover {
-  color: #ffffff; /* 호버 시 텍스트 색상 변경 */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

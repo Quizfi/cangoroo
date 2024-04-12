@@ -5,37 +5,36 @@ function ContentsBanner() {
   return (
     <>
       {/* 컨테이너 밖에서의 제목 */}
-      <h1 className="contentsbanner-title">Cangoroo's Pick </h1>
-
+      <h1 className="contentsbanner-title">캔고루 추천 Pick</h1>
       <div className="contentsbanner-container">
-        <div
-          className="banner"
-          style={{
-            backgroundImage:
-              "url(https://gi.esmplus.com/jjumang/01_tennisb.png)",
-          }}
-        >
+        <div className="banner-content">
+          <img
+            src="https://gi.esmplus.com/jjumang/01_tennisb.png"
+            alt="테니스"
+          />
           <div className="banner-text">
             <h2>테니스</h2>
             <p>따스한 봄바람과 잘 어울리는 테니스를 즐겨보세요.</p>
           </div>
         </div>
-        <div
-          className="banner"
-          style={{ backgroundImage: "url(배너2의-이미지-URL)" }}
-        >
+        <div className="banner-content">
+          <img
+            src="https://gi.esmplus.com/jjumang/hobbycontentsbn.png"
+            alt="도자기 공예"
+          />
           <div className="banner-text">
-            <h2>이벤트 2</h2>
-            <p>세일, 할인 등의 텍스트</p>
+            <h2>도자기 공예</h2>
+            <p>나만의 작품을 만들어보세요.</p>
           </div>
         </div>
-        <div
-          className="banner"
-          style={{ backgroundImage: "url(배너3의-이미지-URL)" }}
-        >
+        <div className="banner-content">
+          <img
+            src="https://gi.esmplus.com/jjumang/museum2.png"
+            alt="스튜디오 지브리"
+          />
           <div className="banner-text">
-            <h2>이벤트 3</h2>
-            <p>세일, 할인 등의 텍스트</p>
+            <h2>스튜디오 지브리</h2>
+            <p>타카하다 이사오展</p>
           </div>
         </div>
       </div>

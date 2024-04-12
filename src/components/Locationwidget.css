@@ -1,0 +1,43 @@
+.event-widget {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 컨테이너 중앙 정렬 */
+}
+
+.event-widget h2 {
+  align-self: flex-start; /* 제목 좌측 정렬 */
+  margin-left: 180px; /* 왼쪽 여백 조정 */
+}
+
+.event-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 83%; /* 스크롤 컨테이너의 너비를 제한 */
+}
+
+.event-item {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.event-item img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px; /* 둥근 이미지 */
+  object-fit: cover;
+}
+
+.event-item p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.event-info h3,
+.event-info p {
+  margin: 5px 0;
+}
