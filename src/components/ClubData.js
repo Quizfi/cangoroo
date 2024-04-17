@@ -159,7 +159,7 @@ export const companies = [
   {
     id: 6,
     category: "축구",
-    name: "안영축구클럽",
+    name: "자동문축구단",
     location: "서울시 중구",
     time: "월~목 18:00~24:00",
     fee: "3시간 8만원",

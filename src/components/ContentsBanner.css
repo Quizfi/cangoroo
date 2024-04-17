@@ -4,6 +4,8 @@
   gap: 20px; /* 배너 간 간격 */
   padding: 20px 0;
   margin-top: 100px;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 
 .contentsbanner-title {
@@ -15,32 +17,28 @@
   font-size: 24px; /* 제목 폰트 크기 */
 }
 
-.banner {
+.banner-content {
   flex: 1;
   display: flex;
   flex-direction: column; /* 요소들을 세로로 나열 */
   align-items: center; /* 가운데 정렬 */
-  background-size: cover; /* 배경 이미지 커버 */
-  border-radius: 10px; /* 모서리 둥글게 */
-}
-
-.banner-content {
-  width: 80%;
+  justify-content: center; /* 추가: 이미지와 텍스트 컨텐츠 중앙 정렬 */
+  width: 100%; /* 조정 가능 */
 }
 
 .banner-content img {
-  width: 80%; /* 이미지 너비 100% */
+  max-width: 100%; /* 최대 너비 100%로 설정 */
   height: auto; /* 이미지 높이 자동 */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  justify-content: center;
-  text-align: center;
+  border-radius: 10px; /* 모서리 둥글게 */
+  margin: auto; /* 이미지를 중앙 정렬 */
 }
 
 .banner-text {
-  background-color: #fff; /* 텍스트 배경 흰색 */
+  width: 92%; /* 텍스트 영역 너비 */
+  background-color: #f0f0f0; /* 텍스트 배경 흰색 */
   padding: 20px;
   text-align: center; /* 텍스트 중앙 정렬 */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  margin-top: -10px;
 }
