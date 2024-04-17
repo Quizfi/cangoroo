@@ -1,0 +1,25 @@
+.tabs button {
+  padding: 10px;
+  margin-right: 5px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background-color: rgb(109, 109, 250);
+  color: white;
+}
+
+.content {
+  padding: 20px;
+  border: none; /* 테두리선 제거 */
+}
+
+.tabs {
+  border: none; /* 테두리선 제거 */
+  padding: 20px;
+  margin: 20px;
+}

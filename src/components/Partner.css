@@ -1,0 +1,46 @@
+.partner-container {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 컨테이너 중앙 정렬 */
+}
+
+.partner-title {
+  text-align: left; /* 타이틀 좌측 정렬 */
+  font-size: 24px; /* 폰트 크기 */
+  color: #333; /* 폰트 색상 */
+  margin-top: 00px;
+  margin-right: 1300px;
+  margin-bottom: 30px;
+}
+
+.meetings-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 81%; /* 스크롤 컨테이너의 너비를 제한 */
+  margin-bottom: 80px;
+}
+
+.meeting {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.meeting img {
+  width: 250px; /* 이미지 너비 */
+  height: 250px; /* 이미지 높이 자동 */
+  border-radius: 10px; /* 이미지 모서리 둥글게 처리 */
+}
+
+.meeting h2 {
+  margin-top: 10px; /* 상단 마진 줄임 */
+  margin-bottom: 5px; /* 하단 마진 줄임 */
+}
+
+.meeting p {
+  margin-top: 5px; /* 상단 마진 줄임 */
+  margin-bottom: 10px; /* 하단 마진 줄임 */
+}

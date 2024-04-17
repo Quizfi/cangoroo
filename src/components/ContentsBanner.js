@@ -5,7 +5,7 @@ function ContentsBanner() {
   return (
     <>
       {/* 컨테이너 밖에서의 제목 */}
-      <h1 className="contentsbanner-title">캔고루 추천 Pick</h1>
+      <h1 className="contentsbanner-title">Weekly Pick</h1>
       <div className="contentsbanner-container">
         <div className="banner-content">
           <img
