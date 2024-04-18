@@ -1,11 +1,24 @@
+.tab-widget-container {
+  margin: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: left;
+  padding: 10px 0;
+  margin-top: 90px;
+  margin-bottom: -163px;
+  margin-left: 170px;
+}
+
 .tabs button {
   padding: 10px;
-  margin-right: 5px;
+  margin: 0 2px;
   border: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   background-color: lightgray;
   cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .tabs button.active {
@@ -15,11 +28,5 @@
 
 .content {
   padding: 20px;
-  border: none; /* 테두리선 제거 */
-}
-
-.tabs {
-  border: none; /* 테두리선 제거 */
-  padding: 20px;
-  margin: 20px;
+  border: none;
 }

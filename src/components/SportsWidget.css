@@ -1,11 +1,4 @@
-.sports-title {
-  text-align: left; /* 텍스트 가운데 정렬 */
-  padding-left: 180px;
-  margin-bottom: 20px; /* 위젯과의 간격 */
-  margin-top: 80px;
-}
-
-.widget-container.center {
+.sports-widget-container.center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,12 +6,14 @@
   padding: 10px;
   background-color: #ffffff; /* 변경된 배경색 */
   border: 2px solid #ccc; /* 테두리 */
-  width: 81%;
+  width: 84%;
   border-radius: 20px;
-  margin-left: 150px;
+  margin-left: 130px;
+  margin-bottom: 20px; /* 위젯과의 간격 */
+  margin-top: 132px;
 }
 
-.scroll-container {
+.sports-scroll-container {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -35,11 +30,11 @@
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
-.scroll-container::-webkit-scrollbar {
+.sports-scroll-container::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
 
-.scroll-button {
+.sports-scroll-button {
   flex-shrink: 0; /* 버튼 크기 축소 방지 */
   background-color: #ddd;
   border-radius: 10px;
@@ -48,7 +43,7 @@
   cursor: pointer;
 }
 
-.scroll-item {
+.sports-scroll-item {
   flex: 0 0 auto; /* 항목 축소 방지 */
   margin: 5px;
   /* 박스 관련 스타일 제거 예시 */
@@ -61,17 +56,17 @@
   cursor: pointer; /* 마우스 오버 시 커서 변경 */
 }
 
-.scroll-container :first-child {
-  margin-left: 160px; /* 첫 번째 항목의 왼쪽 마진 제거 */
+.sports-scroll-container :first-child {
+  margin-left: 140px; /* 첫 번째 항목의 왼쪽 마진 제거 */
 }
 
 /* 기존 스타일은 유지하되, 선택된 항목 스타일 추가 */
-.selected {
+.sports-selected {
   border: 2px solid #ff0000; /* 선택된 항목에 테두리 적용 */
   border-radius: 4px; /* 테두리 둥글게 */
 }
 
-.meetings-container {
+.sports-meetings-container {
   display: flex;
   flex-wrap: wrap; /* 아이템들이 넘치면 다음 줄로 이동 */
   justify-content: center; /* 가운데 정렬 */
@@ -79,7 +74,7 @@
   margin-top: 50px;
 }
 
-.meeting-item {
+.sports-meeting-item {
   display: flex;
   flex-direction: column; /* 아이템 내부의 내용을 세로로 나열 */
   align-items: left; /* 아이템 내부의 내용을 가운데 정렬 */
@@ -90,7 +85,7 @@
   border-radius: 10px; /* 아이템 모서리 둥글기 */
 }
 
-.companies-container {
+.sports-companies-container {
   display: flex;
   flex-wrap: wrap; /* 아이템들이 넘치면 다음 줄로 이동 */
   justify-content: center; /* 가운데 정렬 */
@@ -98,7 +93,7 @@
   margin-top: 10px;
 }
 
-.company-item {
+.sports-company-item {
   display: flex;
   flex-direction: column; /* 아이템 내부의 내용을 세로로 나열 */
   align-items: left; /* 아이템 내부의 내용을 가운데 정렬 */
@@ -109,17 +104,17 @@
   border-radius: 10px; /* 아이템 모서리 둥글기 */
 }
 
-.meeting-item h3,
-.meeting-item p,
-.company-item h3,
-.company-item p {
+.sports-meeting-item h3,
+.sports-meeting-item p,
+.sports-company-item h3,
+.sports-company-item p {
   margin: 2px 0; /* 위아래 마진 값을 줄여서 텍스트 간의 간격을 줄임 */
   line-height: 1.5; /* 텍스트 라인의 높이를 줄여서 텍스트 간의 간격을 줄임 */
 }
 
-.thumbnail {
-  width: 180px; /* 이미지의 너비 */
-  height: 180px; /* 이미지의 높이 */
+.sports-thumbnail {
+  width: 200px; /* 이미지의 너비 */
+  height: 200px; /* 이미지의 높이 */
   border-radius: 20px; /* 이미지의 모서리를 둥글게 */
   object-fit: cover; /* 컨테이너 크기에 맞게 이미지 크기를 조절 */
   margin-bottom: 10px; /* 이미지와 텍스트 사이의 간격 */

@@ -8,7 +8,7 @@ function TabWidget() {
   const [activeTab, setActiveTab] = useState("sports");
 
   return (
-    <div>
+    <div className="tab-widget-container">
       <div className="tabs">
         <button
           onClick={() => setActiveTab("sports")}
@@ -26,7 +26,7 @@ function TabWidget() {
           onClick={() => setActiveTab("culture")}
           className={activeTab === "culture" ? "active" : ""}
         >
-          문화생활
+          문화
         </button>
       </div>
       <div className="content">

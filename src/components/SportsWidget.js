@@ -59,37 +59,36 @@ function SportsWidget() {
 
   return (
     <div>
-      <h2 className="sports-title">스포츠 동호회 & 클럽</h2>
-      <div className="widget-container center">
-        <button className="scroll-button left" onClick={scrollLeft}>
+      <div className="sports-widget-container center">
+        <button className="sports-scroll-button left" onClick={scrollLeft}>
           &lt;
         </button>
-        <div className="scroll-container" ref={scrollContainerRef}>
+        <div className="sports-scroll-container" ref={scrollContainerRef}>
           {sports.map((sport) => (
             <img
               key={sport.name}
               src={sport.image}
               alt={sport.name}
-              className={`scroll-item ${
-                selectedSport === sport.name ? "selected" : ""
+              className={`sports-scroll-item ${
+                selectedSport === sport.name ? "sports-selected" : ""
               }`}
               onClick={() => setSelectedSport(sport.name)}
             />
           ))}
         </div>
-        <button className="scroll-button right" onClick={scrollRight}>
+        <button className="sports-scroll-button right" onClick={scrollRight}>
           &gt;
         </button>
       </div>
 
       {/* 선택된 스포츠에 해당하는 모임 데이터 표시 */}
-      <div className="meetings-container">
+      <div className="sports-meetings-container">
         {filteredMeetings.map((meeting) => (
-          <div key={meeting.id} className="meeting-item">
+          <div key={meeting.id} className="sports-meeting-item">
             <img
               src={meeting.thumbnail}
               alt={meeting.name}
-              className="thumbnail"
+              className="sports-thumbnail"
             />
             <h3>{meeting.name}</h3>
             <p>{meeting.location}</p>
@@ -100,13 +99,13 @@ function SportsWidget() {
       </div>
 
       {/* 선택된 스포츠에 해당하는 업체 데이터 표시 */}
-      <div className="companies-container">
+      <div className="sports-companies-container">
         {filteredCompanies.map((company) => (
-          <div key={company.id} className="company-item">
+          <div key={company.id} className="sports-company-item">
             <img
               src={company.thumbnail}
               alt={company.name}
-              className="thumbnail"
+              className="sports-thumbnail"
             />
             <h3>{company.name}</h3>
             <p>{company.location}</p>

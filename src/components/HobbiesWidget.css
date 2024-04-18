@@ -1,0 +1,121 @@
+.Hobbies-widget-container.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto; /* 가운데 정렬 */
+  padding: 10px;
+  background-color: #ffffff; /* 변경된 배경색 */
+  border: 2px solid #ccc; /* 테두리 */
+  width: 84%;
+  border-radius: 20px;
+  margin-left: 130px;
+  margin-bottom: 20px; /* 위젯과의 간격 */
+  margin-top: 132px;
+}
+
+.Hobbies-scroll-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-left: 120px;
+  margin: 0 20px; /* 버튼과의 간격 */
+  overflow-x: auto; /* 가로 스크롤바가 필요한 경우에만 표시 */
+  overflow-y: hidden; /* 세로 스크롤바 숨김 */
+  white-space: nowrap; /* 내용을 가로로만 표시하여 세로 스크롤 방지 */
+  /* 가로 스크롤바 숨기기 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.Hobbiesscroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.Hobbies-scroll-button {
+  flex-shrink: 0; /* 버튼 크기 축소 방지 */
+  background-color: #ddd;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Hobbies-scroll-item {
+  flex: 0 0 auto; /* 항목 축소 방지 */
+  margin: 5px;
+  /* 박스 관련 스타일 제거 예시 */
+  /* background-color: transparent; 백그라운드 색 제거 */
+  /* border: none; 테두리 제거 */
+  /* padding: 0; 패딩 제거 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  font-size: 16px; /* 폰트 사이즈 조절 */
+  color: #000; /* 텍스트 색상 */
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+}
+
+.Hobbies-scroll-container :first-child {
+  margin-left: 140px; /* 첫 번째 항목의 왼쪽 마진 제거 */
+}
+
+/* 기존 스타일은 유지하되, 선택된 항목 스타일 추가 */
+.Hobbies-selected {
+  border: 2px solid #ff0000; /* 선택된 항목에 테두리 적용 */
+  border-radius: 4px; /* 테두리 둥글게 */
+}
+
+.Hobbies-meetings-container {
+  display: flex;
+  flex-wrap: wrap; /* 아이템들이 넘치면 다음 줄로 이동 */
+  justify-content: center; /* 가운데 정렬 */
+  gap: 40px; /* 아이템 사이의 간격 */
+  margin-top: 50px;
+}
+
+.Hobbies-meeting-item {
+  display: flex;
+  flex-direction: column; /* 아이템 내부의 내용을 세로로 나열 */
+  align-items: left; /* 아이템 내부의 내용을 가운데 정렬 */
+  width: 200px; /* 아이템의 너비 */
+  padding: 10px; /* 아이템 내부의 패딩 */
+  background-color: #ffffff; /* 아이템 배경색 */
+  border: 1px solid #ffffff; /* 아이템 테두리 */
+  border-radius: 10px; /* 아이템 모서리 둥글기 */
+}
+
+.Hobbies-companies-container {
+  display: flex;
+  flex-wrap: wrap; /* 아이템들이 넘치면 다음 줄로 이동 */
+  justify-content: center; /* 가운데 정렬 */
+  gap: 40px; /* 아이템 사이의 간격 */
+  margin-top: 10px;
+}
+
+.Hobbies-company-item {
+  display: flex;
+  flex-direction: column; /* 아이템 내부의 내용을 세로로 나열 */
+  align-items: left; /* 아이템 내부의 내용을 가운데 정렬 */
+  width: 200px; /* 아이템의 너비 */
+  padding: 10px; /* 아이템 내부의 패딩 */
+  background-color: #ffffff; /* 아이템 배경색 */
+  border: 1px solid #ffffff; /* 아이템 테두리 */
+  border-radius: 10px; /* 아이템 모서리 둥글기 */
+}
+
+.Hobbies-meeting-item h3,
+.Hobbies-meeting-item p,
+.Hobbies-company-item h3,
+.Hobbies-company-item p {
+  margin: 2px 0; /* 위아래 마진 값을 줄여서 텍스트 간의 간격을 줄임 */
+  line-height: 1.5; /* 텍스트 라인의 높이를 줄여서 텍스트 간의 간격을 줄임 */
+}
+
+.Hobbies-thumbnail {
+  width: 200px; /* 이미지의 너비 */
+  height: 200px; /* 이미지의 높이 */
+  border-radius: 20px; /* 이미지의 모서리를 둥글게 */
+  object-fit: cover; /* 컨테이너 크기에 맞게 이미지 크기를 조절 */
+  margin-bottom: 10px; /* 이미지와 텍스트 사이의 간격 */
+}
